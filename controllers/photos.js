@@ -24,10 +24,7 @@ async function create(req, res) {
       });
       // save user details in mongodb
       await photo.save();
-      res.status(200)
-        .send({
-          photo
-        });
+      res.redirect('/')
     } catch (err) {
       console.log(err);
     }

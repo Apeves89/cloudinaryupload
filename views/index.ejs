@@ -11,8 +11,12 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <input type="file" accept="image/*" id="photo" />
-    <button onclick="photoSubmit()">Submit</button>
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name"  /><br>
+      <input type="text" name="test" /><br>
+      <input type="file" name="photo" accept="image/png, image/jpeg" />
+      <button type="submit">Submit</button>
+    </form>
     <h1 id="message"></h1>
     <div>
       <% photos.forEach(function(p){%>
